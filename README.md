@@ -41,3 +41,14 @@ Need more tests for the Saga part of the code.
 
 The app uses the following endpoint:
 http://api.tvmaze.com/search/shows?q=sport
+
+Assumptions
+100K File size - not 100 k messages
+Cleaned files myself
+Don't use a library - find words myself
+https://mytexttools.com/extract-unique-words-from-text-with-frequency-count.html
+- Strip out digits
+http://www.convertcsv.com
+Convert to lower case
+
+Stemming words

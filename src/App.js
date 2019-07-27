@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import "./App.scss";
-import TVGuideDetails from "./components/TVGuideDetails.js";
 import TVGuideControlPanel from "./components/TVGuideControlPanel.js";
 
 import { connect } from "react-redux";
 
 class App extends Component {
   render() {
-    const { fetching, tvGuide, onUpdateTVGuide, error } = this.props;
+    const { words, getWords } = this.props;
     
     return (
       <div className="App">
@@ -18,16 +17,9 @@ class App extends Component {
           </h1>
         </header>
 
-        <TVGuideDetails 
-          fetching={fetching}
-          tvGuide={tvGuide}
-          error={error}
-        />
-
         <TVGuideControlPanel
-          fetching={fetching}
-          onUpdateTVGuide={onUpdateTVGuide}
-          error={error}
+          getWords={getWords}
+          words={words}
         />
       </div>
     );
@@ -36,15 +28,13 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    fetching: state.fetching,
-    tvGuide: state.tvGuide,
-    error: state.error
+    words: state.words
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onUpdateTVGuide: () => dispatch({ type: "API_CALL_REQUEST" })
+    getWords: () => dispatch({ type: "GET_WORDS" })
   };
 };
 
