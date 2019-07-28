@@ -77,9 +77,9 @@ Used the following site: http://www.convertcsv.com/csv-to-json.htm
 The app will search as follows:
 1. If Search term is empty then return nothing. 
 2. Convest Search term to lower case.
-2. Searches the trained dataset for all words beginning with the search term.
-2. Sorts the results with the most frequent words found in the dataset first.
-3. Returns the top 3 words.
+3. Searches the trained dataset for all words beginning with the search term.
+4. Sorts the results with the most frequent words found in the dataset first.
+5. Returns the top 3 words.
 
 ## Other ideas tried
 Looked at the NPM package 'text-miner': https://www.npmjs.com/package/text-miner.

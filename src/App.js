@@ -5,6 +5,10 @@ import { ACTION_TYPE_UPDATE_INPUT_TEXT } from './constants'
 
 import { connect } from "react-redux";
 
+const AppCont = styled.div`
+  font-family: Arial, Helvetica, sans-serif;
+`
+
 const Heading = styled.h1`
   font-size: 18px;
 `
@@ -15,7 +19,7 @@ class App extends Component {
     const { words, updateInputText } = this.props;
     
     return (
-      <div className="App">
+      <AppCont>
         <header>
           <Heading>
             Text Prediction
@@ -30,8 +34,19 @@ class App extends Component {
         />
 
         <p>Will return the 3 most frequent words beginning with the letters typed</p>
-        <p></p>
-      </div>
+        <p>Go to <a href="https://github.com/iq2525/text-prediction">Github</a> for full details on this project.</p>
+        
+        <h2>Algorithm to find words</h2>
+        
+        <p>The app will search as follows:</p>
+        <ol>
+          <li>If Search term is empty then return nothing. </li>
+          <li>Convert Search term to lower case.</li>
+          <li>Searches the trained dataset for all words beginning with the search term.</li>
+          <li>Sorts the results with the most frequent words found in the dataset first.</li>
+          <li>Returns the top 3 words.</li>
+        </ol>
+      </AppCont>
     );
   }
 }
