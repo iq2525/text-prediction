@@ -1,8 +1,13 @@
 import React, { Component } from "react";
-import "./App.scss";
+import styled from 'styled-components'
 import TextInputPanel from "./components/TextInputPanel";
 
 import { connect } from "react-redux";
+
+const Heading = styled.h1`
+  font-size: 18px;
+`
+Heading.displayName = 'Heading'
 
 class App extends Component {
   render() {
@@ -10,11 +15,10 @@ class App extends Component {
     
     return (
       <div className="App">
-        <header className="header">
-          
-          <h1 className="title">
+        <header>
+          <Heading>
             Text Prediction
-          </h1>
+          </Heading>
         </header>
 
         <p>Enter text to start typing</p>

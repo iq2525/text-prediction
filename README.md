@@ -65,3 +65,4 @@ Trim spaces
 lowercase
 Clean data
 
+Requirements
