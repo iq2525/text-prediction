@@ -41,9 +41,12 @@ class App extends Component {
         <p>The app will search as follows:</p>
         <ol>
           <li>If Search term is empty then return nothing. </li>
+          <li>If Search term is only numbers then return nothing.</li>
+          <li>If multiple words entered, then use the last word.</li>
           <li>Convert Search term to lower case.</li>
-          <li>Searches the trained dataset for all words beginning with the search term.</li>
-          <li>Sorts the results with the most frequent words found in the dataset first.</li>
+          <li>Remove any numbers from the search term.</li>
+          <li>Searche the trained dataset for all words beginning with the search term.</li>
+          <li>Sorts the results with the most frequent words descending.</li>
           <li>Returns the top 3 words.</li>
         </ol>
       </AppCont>
