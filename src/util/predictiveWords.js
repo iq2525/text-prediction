@@ -22,6 +22,6 @@ const getCleanInput = (inputText) => {
     const inputTextCleaned = inputText.toLowerCase().trim();
     const singleWord = inputTextCleaned.split(' ').pop();
     const finalWord = singleWord.replace(/\d/g, '');
-    console.log('finalWord: ', finalWord)
+
     return finalWord;
 }
