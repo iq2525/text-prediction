@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.scss";
-import TVGuideControlPanel from "./components/TVGuideControlPanel.js";
+import TextInputPanel from "./components/TextInputPanel";
 
 import { connect } from "react-redux";
 
@@ -13,11 +13,13 @@ class App extends Component {
         <header className="header">
           
           <h1 className="title">
-            Welcome to the TVGuide App
+            Text Prediction
           </h1>
         </header>
 
-        <TVGuideControlPanel
+        <p>Enter text to start typing</p>
+
+        <TextInputPanel
           updateInputText={updateInputText}
           words={words}
         />

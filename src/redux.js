@@ -6,7 +6,7 @@ const UPDATE_INPUT_TEXT = "UPDATE_INPUT_TEXT";
 // reducer with initial state
 const initialState = {
   inputText: "",
-  words: {}
+  words: []
 };
 
 export function reducer(state = initialState, action) {

@@ -1,21 +1,32 @@
 import React from 'react';
 import {shallow} from 'enzyme'
 
-import TVGuideControlPanel from './TVGuideControlPanel';
+import TextInputPanel from './TextInputPanel';
 
-describe('<TVGuideDetails />', () => {
-  it('renders component in success state', () => {
-    const wrapper = shallow(<TVGuideControlPanel 
-      fetching={false}
-      onUpdateTVGuide={null}
-      error={null}
+describe('<TextInputPanel />', () => {
+  it('renders component in start state', () => {
+    const wrapper = shallow(
+      <TextInputPanel 
+        updateInputText={null}
+        words={null}
     />)
   
-    expect(wrapper.find('.update-button').length).toEqual(1)
-    expect(wrapper.find('.update-button').text()).toEqual('Update TVGuide')
+    expect(wrapper.find('TextInput').length).toEqual(1)
+    expect(wrapper.find('PredictiveWordCont').length).toEqual(0)
   });
 
-  it('renders in fetching data state', () => {
+  it('renders component with predictive words', () => {
+    const wrapper = shallow(
+      <TextInputPanel 
+        updateInputText={null}
+        words={['aa', 'bb', 'cc']}
+    />)
+  
+    expect(wrapper.find('TextInput').length).toEqual(1)
+    expect(wrapper.find('PredictiveWordCont').length).toEqual(1)
+  });
+
+  xit('renders in fetching data state', () => {
     const wrapper = shallow(<TVGuideControlPanel 
       fetching={true}
       onUpdateTVGuide={null}
@@ -26,7 +37,7 @@ describe('<TVGuideDetails />', () => {
     expect(wrapper.find('.update-button').text()).toContain('Fetching...')
   });
 
-  it('renders in error state', () => {
+  xit('renders in error state', () => {
     const wrapper = shallow(<TVGuideControlPanel 
       fetching={false}
       onUpdateTVGuide={null}
@@ -36,7 +47,7 @@ describe('<TVGuideDetails />', () => {
     expect(wrapper.find('.error-message').length).toEqual(1)
   });
 
-  it('calls the onUpdateTVGuide dispatch method when the button is clicked', () => {
+  xit('calls the onUpdateTVGuide dispatch method when the button is clicked', () => {
     const mockFn = jest.fn();
     
     const wrapper = shallow(<TVGuideControlPanel 

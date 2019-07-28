@@ -56,7 +56,11 @@ https://mytexttools.com/extract-unique-words-from-text-with-frequency-count.html
 - Strip out digits
 http://www.convertcsv.com
 Convert to lower case
+Styling
+
+Link to Corpus
 
 Trim spaces
 lowercase
+Clean data
 
