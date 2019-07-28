@@ -39,6 +39,10 @@ Start typing in the text box.
 
 ## Run tests
 
+Unit tests are written to cover the entire app.
+
+You can run all the tests using:
+
 ```
 npm test
 ```
