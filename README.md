@@ -1,24 +1,24 @@
-##### Table of Contents
+# Text Prediction App
 
-# TVGuide App
+Created a text prediction app simillar to a smart phone keyboard.  Predictions were trained from a corpus.
 
-## TV Guide data from end point using Redux Saga
-This app uses Redux saga to get TV guide data from a public endpoint - TV Maze.
+# Corpus used
+http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/
 
-You click a buttin and it retrieves the show name of the first TV show if finds.
+A public set of SMS labeled messages that have been collected for mobile phone spam research
 
-## Used Create-React-App as boilerplate
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Software Requirements
+This has been tested on:
+* Node v10.16.0
+* Chrome Browser v75
 
-
-## Approach
-
+Should work on any version of Node 10 and most versions of Chrome.
 
 ## Install App
 Clone the repository and enter the directory:
 ```
-git clone git@github.com:iq2525/tvGuide-app.git
-cd tvGuide-app
+git clone git@github.com:iq2525/text-prediction.git
+cd text-prediction
 ``` 
 
 Install dependencies:
@@ -33,7 +33,7 @@ npm start
 
 In your browser, go to: http://localhost:3000/
 
-Click the button 'Update TVGuide' to get information .
+Start typing in the text box.
 
 ## Run tests
 
@@ -41,12 +41,41 @@ Click the button 'Update TVGuide' to get information .
 npm test
 ```
 
-Need more tests for the Saga part of the code.
+## Bootstrapped with Create React App
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Data Endpoint
+## Assumptions
 
-The app uses the following endpoint:
-http://api.tvmaze.com/search/shows?q=sport
+
+## Approach
+###1. Extsact Unique Words, convest to lower care and get Frequency Count
+Used this website on the corpus: 
+https://mytexttools.com/extract-unique-words-from-text-with-frequency-count.html
+
+Provided me with a text file with data in the following format for every unique word in the corpus:
+*Word - The actual unique word.  E.g. car
+*Count - How many time the words appear in the corpus. E.g. 453
+
+###2. Convert to CSV
+Used this site to convert text file to CSV.
+
+###3. Removed all numbers
+Using Excel, I removed all numbers like telephone numbers.
+
+###4. Sorted data alphabetically
+Using Excel, I sorted the CSV.
+
+###5. Converted the file to JSON so it can be easily imported
+Converted the file to JSON so it can be easily imported.
+Used the following site: http://www.convertcsv.com/csv-to-json.htm
+
+###6. When a user enters a word, the App will return the 3 most frequent words beginning with those letters
+The app will search 
+
+## Other ideas tried
+
+
+## Future Updates
 
 Assumptions
 100K File size - not 100 k messages
