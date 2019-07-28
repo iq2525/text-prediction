@@ -9,6 +9,7 @@ const TextInput = styled.input`
 TextInput.displayName = 'TextInput'
 
 export default class TextInputPanel extends Component {
+  
   render() {
     const { updateInputText, words } = this.props;
     console.log('words: ', words)
@@ -16,7 +17,7 @@ export default class TextInputPanel extends Component {
     return (
       <div className="TextInputPanel">
           <div>
-            <TextInput onChange={(event) => updateInputText(event.target.value)}/>
+            <TextInput autoFocus onChange={(event) => updateInputText(event.target.value)}/>
           </div>
         
           {words && <PredictiveWordsPanel words={words} />}
