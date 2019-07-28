@@ -1,7 +1,7 @@
 import { getWords } from './util/predictiveWords'
 
 // action types
- import { UPDATE_INPUT_TEXT } from './constants';
+ import { ACTION_TYPE_UPDATE_INPUT_TEXT } from './constants';
 
 // reducer with initial state
 const initialState = {
@@ -11,7 +11,7 @@ const initialState = {
 
 export function reducer(state = initialState, action) {
   switch (action.type) {
-    case UPDATE_INPUT_TEXT:
+    case ACTION_TYPE_UPDATE_INPUT_TEXT:
       return { 
         ...state, 
         inputText: action.inputText, 

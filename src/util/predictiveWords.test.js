@@ -23,4 +23,10 @@ describe('getWords', () => {
     
     expect(predictiveWords.length).toEqual(0);
   });
+
+  it.only('returns 0 words when nothing entered', () => {
+    const predictiveWords = getWords('')
+    
+    expect(predictiveWords.length).toEqual(0);
+  });
 });
