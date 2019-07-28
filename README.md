@@ -17,16 +17,12 @@ This has been tested on:
 Should work on any version of Node >= 10 and most versions of Chrome.
 
 ## Install App
-Clone the repository and enter the directory:
+Clone the repository, enter the directory and install dependencies:
 ```
 git clone git@github.com:iq2525/text-prediction.git
 cd text-prediction
-``` 
-
-Install dependencies:
-```
 npm install
-```
+``` 
 
 ## Run App
 ```
