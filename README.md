@@ -1,3 +1,5 @@
+##### Table of Contents
+
 # TVGuide App
 
 ## TV Guide data from end point using Redux Saga
@@ -7,6 +9,10 @@ You click a buttin and it retrieves the show name of the first TV show if finds.
 
 ## Used Create-React-App as boilerplate
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+## Approach
+
 
 ## Install App
 Clone the repository and enter the directory:
@@ -51,4 +57,6 @@ https://mytexttools.com/extract-unique-words-from-text-with-frequency-count.html
 http://www.convertcsv.com
 Convert to lower case
 
-Stemming words
+Trim spaces
+lowercase
+

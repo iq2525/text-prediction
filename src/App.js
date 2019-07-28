@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 
 class App extends Component {
   render() {
-    const { words, getWords } = this.props;
+    const { words, updateInputText } = this.props;
     
     return (
       <div className="App">
@@ -18,7 +18,7 @@ class App extends Component {
         </header>
 
         <TVGuideControlPanel
-          getWords={getWords}
+          updateInputText={updateInputText}
           words={words}
         />
       </div>
@@ -34,7 +34,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    getWords: () => dispatch({ type: "GET_WORDS" })
+    updateInputText: (inputText) => dispatch({ type: "UPDATE_INPUT_TEXT", inputText: inputText })
   };
 };
 
