@@ -1,11 +1,11 @@
 import { reducer } from './redux';
-import { UPDATE_INPUT_TEXT } from './constants'
+import { ACTION_TYPE_UPDATE_INPUT_TEXT } from './constants'
 import { jsxEmptyExpression } from '@babel/types';
 jest.mock('./util/predictiveWords')
 
 describe('redux', () => {
   it('handles UPDATE_INPUT_TEXT', () => {
-    const newState = reducer(null, {type: UPDATE_INPUT_TEXT, inputText: 'a'})
+    const newState = reducer(null, {type: ACTION_TYPE_UPDATE_INPUT_TEXT, inputText: 'a'})
     expect(newState).toEqual(
     {
       inputText: 'a', 

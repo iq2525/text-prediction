@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from 'styled-components'
 import TextInputPanel from "./components/TextInputPanel";
+import { ACTION_TYPE_UPDATE_INPUT_TEXT } from './constants'
 
 import { connect } from "react-redux";
 
@@ -43,7 +44,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    updateInputText: (inputText) => dispatch({ type: "UPDATE_INPUT_TEXT", inputText: inputText })
+    updateInputText: (inputText) => dispatch({ type: ACTION_TYPE_UPDATE_INPUT_TEXT, inputText: inputText })
   };
 };
 

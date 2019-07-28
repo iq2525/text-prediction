@@ -14,7 +14,6 @@ export default class TextInputPanel extends Component {
   
   render() {
     const { updateInputText, words } = this.props;
-    console.log('words: ', words)
 
     return (
       <div className="TextInputPanel">
