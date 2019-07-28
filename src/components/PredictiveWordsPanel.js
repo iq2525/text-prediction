@@ -2,12 +2,19 @@ import React, { Component } from "react";
 import styled from 'styled-components'
 
 const PredictiveWordCont = styled.ul`
-  background: red;
+display: flex;
+justify-content: flex-start;
+padding: 0;
 `
 PredictiveWordCont.displayName = 'PredictiveWordCont'
 
 const PredictiveWord = styled.li`
-  background: yellow;
+  background: lightgrey;
+  list-style: none;
+  font-size: 16px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
 `
 PredictiveWord.displayName = 'PredictiveWord'
 

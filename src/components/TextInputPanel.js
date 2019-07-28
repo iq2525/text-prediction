@@ -4,7 +4,9 @@ import styled from 'styled-components'
 
 const TextInput = styled.input`
   width: 300px;
-  background: yellow;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 5px;
 `
 TextInput.displayName = 'TextInput'
 

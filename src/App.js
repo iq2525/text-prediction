@@ -27,6 +27,9 @@ class App extends Component {
           updateInputText={updateInputText}
           words={words}
         />
+
+        <p>Will return the 3 most frequent words beginning with the letters typed</p>
+        <p></p>
       </div>
     );
   }
