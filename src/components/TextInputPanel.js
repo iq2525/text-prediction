@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PredictiveWordsPanel from './PredictiveWordsPanel';
 import styled from 'styled-components'
 
 const TextInput = styled.input`
@@ -6,12 +7,6 @@ const TextInput = styled.input`
   background: yellow;
 `
 TextInput.displayName = 'TextInput'
-
-
-const PredictiveWordCont = styled.div`
-  background: red;
-`
-PredictiveWordCont.displayName = 'PredictiveWordCont'
 
 export default class TextInputPanel extends Component {
   render() {
@@ -24,14 +19,7 @@ export default class TextInputPanel extends Component {
             <TextInput onChange={(event) => updateInputText(event.target.value)}/>
           </div>
         
-          {words && 
-            <PredictiveWordCont>
-              <ul>
-                {words.map((word, i) => <li key={i}>{word.word}</li>)}
-              </ul>
-            </PredictiveWordCont>
-          }
-          
+          {words && <PredictiveWordsPanel words={words} />}
       </div>
 
     );
